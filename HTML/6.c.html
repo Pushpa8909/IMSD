@@ -1,0 +1,70 @@
+Write a program to explain different ways to take input
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Input Methods</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .section { margin-bottom: 20px; }
+    #output { margin-top: 20px; padding: 10px; border: 1px solid #ccc; }
+  </style>
+</head>
+<body>
+  <h1>Different Ways to Take Input in JavaScript</h1>
+
+  <!-- 1. Text Input Field -->
+  <div class="section">
+    <label for="textInput">Enter your name:</label>
+    <input type="text" id="textInput">
+    <button onclick="getTextInput()">Submit</button>
+  </div>
+
+  <!-- 2. Prompt Dialog -->
+  <div class="section">
+    <button onclick="getPromptInput()">Enter Age (via prompt)</button>
+  </div>
+
+  <!-- 3. Select Dropdown -->
+  <div class="section">
+    <label for="dropdown">Choose a language:</label>
+    <select id="dropdown">
+      <option value="JavaScript">JavaScript</option>
+      <option value="Python">Python</option>
+      <option value="Java">Java</option>
+    </select>
+    <button onclick="getDropdownInput()">Submit</button>
+  </div>
+
+  <!-- 4. Checkbox -->
+  <div class="section">
+    <label><input type="checkbox" id="subscribe"> Subscribe to newsletter</label>
+    <button onclick="getCheckboxInput()">Submit</button>
+  </div>
+
+  <div id="output"></div>
+
+  <script>
+    function getTextInput() {
+      const name = document.getElementById("textInput").value;
+      document.getElementById("output").innerText = `Hello, ${name}!`;
+    }
+
+    function getPromptInput() {
+      const age = prompt("Enter your age:");
+      document.getElementById("output").innerText = `You are ${age} years old.`;
+    }
+
+    function getDropdownInput() {
+      const language = document.getElementById("dropdown").value;
+      document.getElementById("output").innerText = `You selected: ${language}`;
+    }
+
+    function getCheckboxInput() {
+      const isSubscribed = document.getElementById("subscribe").checked;
+      const message = isSubscribed ? "Thanks for subscribing!" : "You chose not to subscribe.";
+      document.getElementById("output").innerText = message;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Thumbnail Image Gallery</title>
+   <style>
+     body{
+         font-family:Arial,sans-serif;
+         text-align: centre;
+      }
+      .gallery{
+          display: flex;
+flex wrap: wrap;
+justify-content:center;
+gap: 15px;
+margin-top:20px;
+}
+.gallery a img{
+width: 100px;
+height: 100px;
+object-fit: cover;
+border: 2px solid #ccc;
+border-radius: 8[x;
+transition: transform 0.3s;
+}
+.gallery a img:hover{
+  transform: scale(1.1);
+  border-color: #666;
+}
+</style>
+</head>
+<body bgcolor="beige">
+<h1>My Image Gallery</h1>
+<p>Click on a thumnail to view the full-sized image</p>
+
+<div class="gallery">
+  <a href="C:\Users\garag\OneDrive\Desktop\College\me.jpg"target=_blank">
+<img src="images/thumb1.jpg" alt="Image-1">
+</a>
+<a href="C:\Users\garag\OneDrive\Desktop\College\Sushma.jpg"target="_blank">
+<img src="images/thumb2.jpg" alt="image-2">
+</a>
+<a href="C:\Users\garag\OneDrive\Desktop\College\Sruthi.jpg"target="_blank">
+<img src="images/thumb3.jpg"alt="image-3">
+</a>
+<a href="C:\Users\garag\OneDrive\Desktop\College\Pravallika.jpg"target="_blank">
+<img src="images/thumb4.jpg"alt="image-4">
+</a>
+
+</div>
+</body>
+</html>
